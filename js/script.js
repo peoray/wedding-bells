@@ -29,35 +29,21 @@ function countDown() {
   const timer = setTimeout(countDown, 1000);
   const countdown = document.getElementById("countdown");
 
-  // let day = "";
-  // let hour = "";
-  // let minute = "";
-  // let second = "";
+  let day = "";
+  let hour = "";
+  let minute = "";
+  let second = "";
 
-  // if (days <= 2) {
-  //   day = "dasssssy";
-  // }
-  // if (hours <= 2) {
-  //   hour = "hour";
-  // }
-  // if (minutes <= 2) {
-  //   minute = "minute";
-  // }
-  // if (seconds <= 2) {
-  //   second = "second";
-  // }
-
-  // days < 2 ? (day = "day") : "days";
-  // hours < 2 ? (hour = "hour") : "hours";
-  // minutes < 2 ? (minute = "minute") : "minutes";
-  // seconds < 2 ? (second = "second") : "seconds";
+  day = days < 2 ? "day" : "days";
+  hour = hours < 2 ? "hour" : "hours";
+  minute = minutes < 2 ? "minute" : "minutes";
+  second = seconds < 2 ? "second" : "seconds";
 
   if (timeDiff <= 0) {
     clearTimeout(timer);
     return (countdown.innerHTML = "Emma and Raymond have tied the knot!");
   } else {
-    // return countdown.innerHTML = `${days} ${day} ${hours} ${hour} ${minutes} ${minute} ${seconds} ${second}`;
-    return (countdown.innerHTML = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`);
+    return (countdown.innerHTML = `${days} ${day} ${hours} ${hour} ${minutes} ${minute} ${seconds} ${second}`);
   }
 }
 countDown();
