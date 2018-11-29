@@ -12,7 +12,7 @@ getYear();
 // COUNTDOWN TIMER
 function countDown() {
   // get date of wedding
-  const weddingDate = new Date("December 31, 2018 16:57:59");
+  const weddingDate = new Date("November 30, 2018");
   // get current date
   const now = new Date();
   const timeDiff = weddingDate.getTime() - now.getTime();
@@ -29,14 +29,35 @@ function countDown() {
   const timer = setTimeout(countDown, 1000);
   const countdown = document.getElementById("countdown");
 
+  // let day = "";
+  // let hour = "";
+  // let minute = "";
+  // let second = "";
+
+  // if (days <= 2) {
+  //   day = "dasssssy";
+  // }
+  // if (hours <= 2) {
+  //   hour = "hour";
+  // }
+  // if (minutes <= 2) {
+  //   minute = "minute";
+  // }
+  // if (seconds <= 2) {
+  //   second = "second";
+  // }
+
+  // days < 2 ? (day = "day") : "days";
+  // hours < 2 ? (hour = "hour") : "hours";
+  // minutes < 2 ? (minute = "minute") : "minutes";
+  // seconds < 2 ? (second = "second") : "seconds";
+
   if (timeDiff <= 0) {
     clearTimeout(timer);
     return (countdown.innerHTML = "Emma and Raymond have tied the knot!");
   } else {
-    if (hours < 2) {
-      return (countdown.innerHTML = `${days} days ${hour} hours ${minutes} minutes ${seconds} seconds`);
-    }
-    countdown.innerHTML = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
+    // return countdown.innerHTML = `${days} ${day} ${hours} ${hour} ${minutes} ${minute} ${seconds} ${second}`;
+    return (countdown.innerHTML = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`);
   }
 }
 countDown();
