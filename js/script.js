@@ -33,6 +33,9 @@ function countDown() {
     clearTimeout(timer);
     return (countdown.innerHTML = "Emma and Raymond have tied the knot!");
   } else {
+    if (hours < 2) {
+      return (countdown.innerHTML = `${days} days ${hour} hours ${minutes} minutes ${seconds} seconds`);
+    }
     countdown.innerHTML = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
   }
 }
