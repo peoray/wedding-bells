@@ -1,6 +1,6 @@
 # wedding-bells
 
-A parallax designed fictional wedding page
+A parallax designed fictional wedding page - [view the website live](https://peoray.github.io/wedding-bells/)
 
 A challenge created for **30-days-30-sites** where you create 30 webpages in as many days as you can.
 
