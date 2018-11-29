@@ -5,14 +5,14 @@ function getYear() {
   // get current year
   const year = date.getFullYear();
   // insert current year into page
-  document.getElementById('year').innerHTML = year;
+  document.getElementById("year").innerHTML = year;
 }
 getYear();
 
 // COUNTDOWN TIMER
 function countDown() {
   // get date of wedding
-  const weddingDate = new Date('August 31, 2018 16:57:59');
+  const weddingDate = new Date("December 31, 2018 16:57:59");
   // get current date
   const now = new Date();
   const timeDiff = weddingDate.getTime() - now.getTime();
@@ -27,11 +27,11 @@ function countDown() {
   seconds %= 60;
 
   const timer = setTimeout(countDown, 1000);
-  const countdown = document.getElementById('countdown');
+  const countdown = document.getElementById("countdown");
 
   if (timeDiff <= 0) {
     clearTimeout(timer);
-    return (countdown.innerHTML = 'Emma and Raymond have tied the knot!');
+    return (countdown.innerHTML = "Emma and Raymond have tied the knot!");
   } else {
     countdown.innerHTML = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
   }
@@ -44,7 +44,7 @@ var html, body, sttbtn;
 window.onload = function() {
   html = document.documentElement;
   body = document.body;
-  sttbtn = document.getElementById('btt');
+  sttbtn = document.getElementById("btt");
 };
 
 window.onscroll = stt;
@@ -55,9 +55,9 @@ function stt() {
     body.scrollTop > windowInnerHeightX2 ||
     html.scrollTop > windowInnerHeightX2
   ) {
-    sttbtn.classList.add('show');
+    sttbtn.classList.add("show");
   } else {
-    sttbtn.classList.remove('show');
+    sttbtn.classList.remove("show");
   }
 }
 
@@ -88,35 +88,35 @@ function ease(t, power) {
   }
 }
 
-document.getElementById('btt').addEventListener('click', function() {
+document.getElementById("btt").addEventListener("click", function() {
   sttop(300, 3);
 });
 /* The Back to top button ends here */
 
 //Modal Form popup
-const modal = document.getElementById('simpleModal');
-const modalBtn = document.getElementById('modalBtn');
-const closeBtn = document.querySelector('.closeBtn');
+const modal = document.getElementById("simpleModal");
+const modalBtn = document.getElementById("modalBtn");
+const closeBtn = document.querySelector(".closeBtn");
 
 // show the modal form
 const openModal = () => {
-  modal.style.display = 'block';
+  modal.style.display = "block";
 };
 
 // close the modal form
 const closeModal = () => {
-  modal.style.display = 'none';
+  modal.style.display = "none";
 };
 
 const outsideClick = () => {
-  modal.style.display = 'block';
+  modal.style.display = "block";
 };
 
-document.getElementById('submit').addEventListener('click', e => {
-  modal.style.display = 'none';
-  alert('Thank you! We look forward to seeing you.');
+document.getElementById("submit").addEventListener("click", e => {
+  modal.style.display = "none";
+  alert("Thank you! We look forward to seeing you.");
 });
 
-modalBtn.addEventListener('click', openModal);
-closeBtn.addEventListener('click', closeModal);
-closeBtn.addEventListener('click', closeModal);
+modalBtn.addEventListener("click", openModal);
+closeBtn.addEventListener("click", closeModal);
+closeBtn.addEventListener("click", closeModal);
