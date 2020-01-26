@@ -12,7 +12,7 @@ getYear();
 // COUNTDOWN TIMER
 function countDown() {
   // get date of wedding
-  const weddingDate = new Date("November 30, 2018");
+  const weddingDate = new Date("November 30, 2020");
   // get current date
   const now = new Date();
   const timeDiff = weddingDate.getTime() - now.getTime();
